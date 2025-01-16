@@ -23,17 +23,28 @@ class Animal {
 }
 
 class Dog extends Animal {
-  // YOUR CODE HERE
+  constructor(){
+    super('dog')
+  }
+  speak(){
+    return `The ${super.getType()} barks`
+  }
 }
 
 class Cat extends Animal {
-  // YOUR CODE HERE
+  constructor(){
+    super('cat')
+  }
+  speak(){
+    return `The ${this.getType()} meows`
+  }
 }
 
 
 // Test Code / Driver Code
 const dog = new Dog();
 const cat = new Cat();
-
+const oliver = new Animal('camel')
 console.log(dog.speak());  // Expected Output: "The dog barks"
 console.log(cat.speak());  // Expected Output: "The cat meows"
+console.log(oliver.getType())
